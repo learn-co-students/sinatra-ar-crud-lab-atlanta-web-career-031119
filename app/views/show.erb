@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> - Articles - </title>
+    </head>
+    <body>
+        <h1><u><b> <%= @article.title %> </u></b></h1>
+        <br>
+        <h2> Content: </h2>
+        <br>
+        <p> <%= @article.content %> </p>
+        <br>
+        <br>
+        <br>
+        <a href='/articles/<%= @article.id %>'>Click here to edit this article.<a/>
+        <br>
+        <a href='/articles'>Click here to go to the article list.</a>
+        <br>
+        <a href='/articles/new'>Click here to add a new article!</a>
+        <br>
+        <br>
+        <br>
+        <form method="post" action="/articles/<%= @article.id %>">
+            <input id="hidden" type="hidden" name="_method" value="DELETE">
+            <input type="submit" value="Delete!">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> - Articles - </title>
+    </head>
+    <body>
+        <h1><u><b> List of Articles </u></b></h1>
+        <br>
+        <h2> Title: </h2>
+        <br>
+        <ul><li>
+        <% @articles.all.each do |article| %>
+        <p><a href='/articles/<%= article.id %>'> <%= article.title %> </a></p>
+        <% end %>
+        </li></ul>
+        <br>
+        <a href='/articles/new'>Click here to add a new article!</a>
+    </body>
+</html>
