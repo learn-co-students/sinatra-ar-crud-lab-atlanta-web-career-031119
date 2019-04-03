@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Articles</title>
+  </head>
+  <body>
+    <h1><u><b> Current Title: <%= @article.title %> </u></b></h1>
+    <br>
+    <h2> Current Content: </h2>
+    <br>
+    <p> <%= @article.content %> </p>
+    <br>
+    <br>
+    <h1> Edit existing article. </h1>
+    <form method="POST" action="/articles/<%= params[:id] %>">
+      <input id="hidden" type="hidden" name="_method" value="PATCH">
+      <p> Article's New Title: <input type='text' name='title'></p>
+      <br>
+      <p>Put in the new content for this article:</p>
+      <textarea placeholder="Enter the content here..." name="content" cols=80 rows=6 ></textarea>
+      <br>
+      <button id='submit' type="submit" value="Submit">Submit</button>
+    </form>
+    <br>
+    <br>
+    <a href='/articles'>Click here to go to the article list.</a>
+    <br>
+    <a href='/articles/new'>Click here to add a new article!</a>
+  </body>
+</html>
