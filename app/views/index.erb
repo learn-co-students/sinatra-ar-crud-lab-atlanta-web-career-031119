@@ -1,0 +1,15 @@
+<p> the article title is <p>
+
+<p> the article content is <p>
+
+<ul>
+
+  <% @articles.each do |article| %>
+   <li>
+    <p> Article title = <%= article.title %>
+    <p> Article content = <%= article.content%>
+
+  </li>
+    <%end%>
+
+  </ul>
